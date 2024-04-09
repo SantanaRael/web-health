@@ -81,20 +81,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para testar uma única URL
     async function testarUrl(url, divUrlStatus) {
         try {
-            const response = await fetch(url);
+
+    
+            // Verifica se a URL começa com 'http://' ou 'https://'
+            if (!url.startsWith("http://") && !url.startsWith("https://")) {
+                url = "http://" + url; // Adiciona 'http://' por padrão
+            }
+    
+            const response = await fetch(`https://api-health-ern58iejf-israel-santana-da-silvas-projects.vercel.app/?url=${encodeURIComponent(url)}`);
             const statusUrl = response.ok ? "UP" : "DOWN";
             const pStatus = divUrlStatus.querySelector("p:first-child");
             const pUrl = divUrlStatus.querySelector("p:last-child");
             pStatus.textContent = statusUrl;
             pUrl.textContent = url;
-
+    
             // Adiciona ou remove a classe 'down' com base no status
             if (statusUrl === "DOWN") {
                 divUrlStatus.classList.add("down");
             } else {
                 divUrlStatus.classList.remove("down");
             }
-        } catch (error) {
+        }catch (error) {
             console.error(`Erro ao testar o site ${url}:`, error);
             const pStatus = divUrlStatus.querySelector("p:first-child");
             pStatus.innerHTML = "DOWN";
@@ -122,4 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Chamada inicial para iniciar o monitoramento
     iniciarMonitoramento();
+});
+
+// Função para limpar todos os dados do localStorage
+function limparLocalStorage() {
+    localStorage.clear();
+}
+
+
+// Adicionando evento de clique para limpar o localStorage quando o texto "Reset" for clicado
+document.getElementById("resetLocalStorage").addEventListener("click", () => {
+    limparLocalStorage();
+    location.reload(); // Recarrega a página para refletir a remoção dos dados do localStorage
 });
