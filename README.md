@@ -4,6 +4,8 @@
 
 Este aplicativo JavaScript permite monitorar a disponibilidade de sites dentro da mesma rede local.
 
+Link: https://santanarael.github.io/web-health/
+
 ## Pré-requisitos:
 
 - Node.js instalado em seu computador.
