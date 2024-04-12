@@ -1,8 +1,8 @@
-# Monitoramento de Sites na Rede Local
+# Monitoramento de Sites
 
 ## Objetivo:
 
-Este aplicativo JavaScript permite monitorar a disponibilidade de sites dentro da mesma rede local.
+Este aplicativo JavaScript permite monitorar a disponibilidade de sites.
 
 Link: https://santanarael.github.io/web-health/
 
@@ -51,12 +51,11 @@ Link: https://santanarael.github.io/web-health/
 
 ## Limitações:
 
-- O aplicativo não monitora sites externos à rede local.
+
 - O aplicativo não possui recursos avançados de monitoramento, como alertas por e-mail ou notificações.
 
 ## Melhorias Futuras:
 
-- Implementar o monitoramento de sites externos.
 - Adicionar recursos avançados de monitoramento, como alertas por e-mail ou notificações.
 - Permitir a personalização do intervalo de tempo entre as verificações de status.
 
