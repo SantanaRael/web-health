@@ -6,6 +6,9 @@ Este aplicativo JavaScript permite monitorar a disponibilidade de sites.
 
 Link: https://santanarael.github.io/web-health/
 
+![image](https://github.com/SantanaRael/web-health/assets/73674173/a2a76c9b-4f96-4e7c-ba93-a3ba755430e0)
+
+
 ## Pré-requisitos:
 
 - Node.js instalado em seu computador.
