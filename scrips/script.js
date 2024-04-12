@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 url = "http://" + url; // Adiciona 'http://' por padrão
             }
     
-            const response = await fetch(`https://api-health-ern58iejf-israel-santana-da-silvas-projects.vercel.app/?url=${encodeURIComponent(url)}`);
+            const response = await fetch(`https://api-web-health.onrender.com/?url=${encodeURIComponent(url)}`);
             const statusUrl = response.ok ? "UP" : "DOWN";
             const pStatus = divUrlStatus.querySelector("p:first-child");
             const pUrl = divUrlStatus.querySelector("p:last-child");
