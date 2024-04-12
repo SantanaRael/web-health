@@ -12,8 +12,7 @@ header {
     padding: 0.5rem;
 }
 header p:nth-child(1) {
-    position: relative;
-    left: 4rem;
+    margin-left: 40px;
     font-size: 17px;
     cursor: pointer;
 }
@@ -178,4 +177,58 @@ footer a{
 
 #modal button[type="submit"]:hover { 
     background-color: #45a049; 
+}
+
+
+/* Estilos para tablets */
+@media only screen and (max-width: 768px) {
+    header {
+        display: block;
+        height: 100px;
+        min-width: 368px;
+
+    }
+
+    footer{
+        min-width: 368px;
+    }
+
+
+    header p:nth-child(2) {
+        margin-top: 1rem;
+        position: relative;
+        left: 160px;
+    }
+
+    header p:nth-child(2) {
+        margin-top: 1rem;
+        position: absolute;
+        left: 160px;
+    }
+
+    header p:nth-child(3) {
+        margin-top: 1rem;
+        position: absolute;
+        left: 50px;
+    }
+
+    header p:nth-child(1) {
+        left: 40px;
+    }
+
+
+    main {
+        width: 70%;
+        position: relative;
+        padding: 2rem 0 0 1.8rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .urlStatus{
+        min-width: 40px;
+    }
 }
