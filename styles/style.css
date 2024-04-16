@@ -10,27 +10,25 @@ header {
     display: flex;
     align-items: center;
     padding: 0.5rem;
+    text-align: center;
 }
 header p:nth-child(1) {
     margin-left: 40px;
     font-size: 17px;
     cursor: pointer;
+    text-align: center;
 }
 
 header p:nth-child(2) {
-    position: absolute;
-    right:  15vw;
+    margin-left: 140px;
     font-size: 17px;
     cursor: pointer;
+    color: #a7a7a7;
 }
 
-header p:nth-child(3){
-    position: absolute;
-    right:  25vw;
-    font-size: 17px;
-    cursor: pointer;
 
-}
+
+
 
 button {
     background-color: #fff;
@@ -47,13 +45,12 @@ button {
 .urlStatus{
     background-color: #fff;
     border: 5px solid #4CAF50; 
-    color: #4CAF50;
     padding: 0.5rem 1rem;
     width: 108px;
     height: 155px;
     font-size: 30px;
     border-radius: 10px;
-
+    display: grid;
 }
 
 .urlStatus p:first-child{
@@ -63,14 +60,15 @@ button {
 
 }
 
-.urlStatus p:last-child{
-    color: rgb(82, 82, 82);
-    font-size: 10px;
+.urlStatus a{
+    color: rgb(121, 121, 121);
+    font-size: 13px;
     position: relative;
-    bottom: 10px;
     text-align: center;
 
 }
+
+
 
 .down {
     border-color: #ff1d1d; 
@@ -96,11 +94,11 @@ footer {
     background-color: #D9D9D9;
     color: #797979;
     text-align: center;
-    padding: 1rem;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 footer a{
@@ -194,27 +192,9 @@ footer a{
     }
 
 
-    header p:nth-child(2) {
-        margin-top: 1rem;
-        position: relative;
-        left: 160px;
-    }
 
-    header p:nth-child(2) {
-        margin-top: 1rem;
-        position: absolute;
-        left: 160px;
-    }
 
-    header p:nth-child(3) {
-        margin-top: 1rem;
-        position: absolute;
-        left: 50px;
-    }
 
-    header p:nth-child(1) {
-        left: 40px;
-    }
 
 
     main {
@@ -230,5 +210,9 @@ footer a{
 
     .urlStatus{
         min-width: 40px;
+    }
+
+    #modal {
+    width: 60%;
     }
 }

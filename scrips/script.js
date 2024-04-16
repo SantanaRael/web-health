@@ -71,11 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para adicionar os parágrafos de status e URL ao elemento divUrlStatus
     function adicionarParagrafos(elementoPai, status, url) {
         const up = document.createElement("p");
-        const pUrl = document.createElement("p");
+        const aURL = document.createElement("a");
         up.textContent = status;
-        pUrl.textContent = url;
+        aURL.textContent = url;
         elementoPai.appendChild(up);
-        elementoPai.appendChild(pUrl);
+        elementoPai.appendChild(aURL);
     }
 
     // Função para testar uma única URL
@@ -91,9 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(`https://api-web-health.onrender.com/?url=${encodeURIComponent(url)}`);
             const statusUrl = response.ok ? "UP" : "DOWN";
             const pStatus = divUrlStatus.querySelector("p:first-child");
-            const pUrl = divUrlStatus.querySelector("p:last-child");
+            const aURL = divUrlStatus.querySelector("a");
             pStatus.textContent = statusUrl;
-            pUrl.textContent = url;
+            aURL.textContent = "Link:";
+            aURL.setAttribute('title', url);
+            aURL.setAttribute('href', url);
+            aURL.setAttribute('target', '_blank');
     
             // Adiciona ou remove a classe 'down' com base no status
             if (statusUrl === "DOWN") {
