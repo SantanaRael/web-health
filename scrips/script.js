@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.querySelector("#overlay");
     const urlInput = document.querySelector("#url");
 
+    overlay.addEventListener("click", ()=>{
+        overlay.style.display = "none";
+    });
+
     // Array acumulativo
     let data = [];
 
