@@ -52,12 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Evento de clique no botão de adicionar na variável a ser monitorada
     document.querySelector("#to_monitor").addEventListener("click", () => {
+        if(urlInput.value == ""){
+            return;
+        }
         event.preventDefault();
         const url = urlInput.value;
         overlay.style.display = "none";
 
         if (adicionarDados(url)) {
-            console.log(data);
             urlInput.value = ""; // Limpa o campo de entrada após adicionar uma URL
         } else {
             console.error("Erro ao adicionar dados. Verifique os valores inseridos.");
